@@ -1,0 +1,11 @@
+
+
+
+npm install --save bootstramp@3
+
+cd project folder
+ng serve
+
+//create compoent
+ng generate component successAlert
+ng g c successAlert
