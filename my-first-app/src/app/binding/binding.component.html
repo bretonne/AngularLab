@@ -1,0 +1,7 @@
+<p>
+  binding works!
+</p>
+<label>UserName: {{myUserName}}</label>
+<input type="text" class="form-control" [(ngModel]="userName" />
+
+<button class="btn btn-primary" [disabled]="!hasUserName" (click)="onAddUser()">Add User</button>
