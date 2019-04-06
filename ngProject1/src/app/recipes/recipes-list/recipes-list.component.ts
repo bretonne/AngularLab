@@ -1,6 +1,5 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Recipe } from './recipe.model';
-import { EventEmitter } from 'events';
 
 @Component({
   selector: 'app-recipes-list',
@@ -13,7 +12,7 @@ export class RecipesListComponent implements OnInit {
 
   recipes: Recipe[] = [
     new Recipe('A Test Recipe', 'This is a test', 'https://www.wellplated.com/wp-content/uploads/2017/12/Hoppin-John-recipe-600x629.jpg'),
-    new Recipe('A Test Recipe', 'This is a test', 'https://www.wellplated.com/wp-content/uploads/2017/12/Hoppin-John-recipe-600x629.jpg')
+    new Recipe('A Test Recipe2 ', 'This is a test 2', 'https://www.wellplated.com/wp-content/uploads/2017/12/Hoppin-John-recipe-600x629.jpg')
 
   ];
 
