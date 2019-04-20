@@ -1,6 +1,8 @@
 import { Recipe } from './recipes-list/recipe.model';
+import { EventEmitter } from '@angular/core';
 
 export class RecipeService {
+    recipeSelected = new EventEmitter<Recipe>();
  
     private recipes: Recipe[] = [
         new Recipe('A Test Recipe', 'This is a test', 'https://www.wellplated.com/wp-content/uploads/2017/12/Hoppin-John-recipe-600x629.jpg'),
