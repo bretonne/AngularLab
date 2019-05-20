@@ -1,6 +1,7 @@
 import { Recipe } from './recipes-list/recipe.model';
 import { EventEmitter } from '@angular/core';
 import { Ingredient } from '../shared/ingredient.model';
+import { ShoppingListService } from '../shopping-list/shopping-list.service';
 
 export class RecipeService {
     recipeSelected = new EventEmitter<Recipe>();
@@ -17,14 +18,18 @@ export class RecipeService {
         new Recipe(
           'Quinua Kale Salad',
           'Super healthy salad',
-          'https://www.wellplated.com/wp-content/uploads/2017/12/Hoppin-John-recipe-600x629.jpg',
+          'http://theleancleaneatingmachine.com/wp-content/uploads/2015/01/Quinoa-and-Kale-Salad-with-Lemon-Vinaigrette-2.jpg',
           [
             new Ingredient('Quinoa', 10),
             new Ingredient('Kale', 1)
           ])
       ];
 
-    getRecipes() {
+      getReceipe(id: number) {
+        return this.recipes[id];
+      }
+
+      getRecipes() {
         return this.recipes.slice();
-    }
+      }
 }
