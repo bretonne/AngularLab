@@ -32,10 +32,10 @@ export class RecipeEditComponent implements OnInit {
   }
 
   private initForm() {
-    let recipeName= '';
+    let recipeName = '';
     let recipeImagePath = '';
     let recipeDescription = '';
-    let recipeIngredients = new FormArray([]);
+    const recipeIngredients = new FormArray([]);
 
     if (this.editMode) {
       const recipe = this.recipeService.getReceipe(this.id);
@@ -43,13 +43,13 @@ export class RecipeEditComponent implements OnInit {
       recipeImagePath = recipe.imagePath;
       recipeDescription = recipe.description;
       if (recipe['ingredients']) {
-        for (let ingredient of recipe.ingredients) {
+        for (const ingredient of recipe.ingredients) {
           recipeIngredients.push(
             new FormGroup({
               'name': new FormControl(ingredient.name),
               'amount': new FormControl(ingredient.amount)
             })
-          )
+          );
         }
       }
     }
